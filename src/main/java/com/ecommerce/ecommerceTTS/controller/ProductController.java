@@ -1,5 +1,7 @@
 package com.ecommerce.ecommerceTTS.controller;
 
+import com.ecommerce.ecommerceTTS.model.Product;
+import com.ecommerce.ecommerceTTS.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

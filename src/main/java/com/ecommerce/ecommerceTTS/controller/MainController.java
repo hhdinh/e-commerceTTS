@@ -1,5 +1,7 @@
 package com.ecommerce.ecommerceTTS.controller;
 
+import com.ecommerce.ecommerceTTS.model.Product;
+import com.ecommerce.ecommerceTTS.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,7 +41,7 @@ public class MainController {
     @GetMapping(value = "/filter")
     public String filter(@RequestParam(required = false) String category,
                          @RequestParam(required = false) String brand, Model model) {
-        List<Product> filtered = productService.findByBrandAndOrCategory(brand, category);
+        List<Product> filtered = productService.findByBrandAndCategory(brand, category);
         model.addAttribute("products", filtered);
         return "main";
     }
